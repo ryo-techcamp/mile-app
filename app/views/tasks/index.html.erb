@@ -1,9 +1,10 @@
 　<!DOCTYPE html>
 <html lang="ja">
+
 <head>
  <meta charset="utf-8">
- <title>mile_app</title>
- <meta name="description" content="komorikomashaは、コモモ・モリコ・ひろましゃ３人のメンバーが勢いでつくったものや活動を紹介しているサイトです。">
+ <title>マイルで参る</title>
+ <meta name="description" content="日々の買い物、隙間時間を利用してタダで飛行機に乗って海外旅行をしよう!!">
  <link rel="stylesheet" href="./normalize.css">
  <link rel="stylesheet" href="./style.css">
  
@@ -24,19 +25,47 @@
  
   </head>
  <body>
- <%= render "shared/header" %>
-
  
- <%# <p class="topicPath"><a href="index.html">ホーム</a> &gt;つくったもの</p>
+ <%# <div id="page">
+ 
+ <p class="topicPath"><a href="index.html">ホーム</a> &gt;つくったもの</p>
  
  
  <div id="pageBodyMain">
  
  <section>
  
- <h1 class="pageTitle">つくったもの</h1>
+ <h1 class="pageTitle">つくったもの</h1> %>
+   <div class='item-contents'>
+    <h2 class='title'>おすすめ案件共有</h2>
+    <%= link_to 'みんなで共有しよう', "#", class: "subtitle" %>
+    <ul class='item-lists'>
  
- <article class="articleList">
+      <% @tasks.each do |task|%>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <div class='item-img-content'>
+        <%= image_tag task.image,  class: 'item-img'  %>
+           <%# <% if item.buyer.present? %>  
+          <%# <div class='sold-out'>
+            <span>Sold Out!!</span>
+          </div>
+           <% end %>   
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= task.name %>
+          </h3>
+          <div class='item-price'>
+            <span><%= task.price %>円</span>
+          </div>
+        </div>
+        <% end %>
+      <%end%>
+    </ul>
+  </div>
+
+ <%# <article class="articleList">
  <a href="03.html">
  <div class="articleListText">
  <h1>バッタになりたい魔法使い</h1>
@@ -44,7 +73,7 @@
  合言葉は、バッタになっちゃえ！</p>
  </div>
  <div class="articleListImage">
- <img src="img_01_01.jpg" width="300" height="163" alt=" "> </div>
+ <img src="image/img_02_04.jpg" width="300" height="163" alt=" "> </div>
  </a>
  </article>
  
@@ -65,33 +94,23 @@
  <h1>Cafe Debut</h1>
  <p>baserCMSのカフェサイト用汎用テーマ<br>
  テーマコンテスト2012飲食店系テーマ賞受賞</p>
- </div> %>
- <%# <div class="articleListImage">
+ </div>
+ <div class="articleListImage">
 <img src="image/img_02_04.jpg" width="300" height="163" alt=" "> </div>
 </div>
 </a>
  </article>
  </section>
  
-</div> %>
-
-
-<div id="pageBody">
-<section class="mainVisual">
-<ul class="bxslider">
-<li>
-
-<div class="mainVisualText">
-<h1>このサイトでできること</h1>
-<p>コモモ・ひろましゃ制作のWeb仕掛け絵本<br>合言葉はバッタになっちゃえ！</p>
 </div>
-<%= image_tag "road-2371503_1920.jpg", class:"list-pict" %>
-
-</li>
-</ul>
-</section>
 
 <div id="pageBodySub">
+<ul>
+<li><a href="03.html">バッタになりたい魔法使い</a></li>
+<li><a href="02.html">WordPressデザインワークブック</a></li>
+<li><a href="01.html">Cafe Debut</a></li>
+</ul>
+
 <section class="newsList">
 <h2>お知らせ</h2>
 <ul>
@@ -103,49 +122,37 @@
 </section>
 </div>
 
+  <div id="pageBody">
+<section class="mainVisual">
 
-  <div class='select-reason-contents'>
-    <h2 class='title'>
-      FURIMAが選ばれる3つの理由
-    </h2>
-    <ul class='reason-lists'>
-      <li class='list'>
-        <%= image_tag "furima-intro01.png", class:"list-pict" %>
-        <span class='reason-list-number'>1</span>
-        <h3 class='reason-list-text'>
-          <span class='reason-list-blue-text'>3分</span>
-          ですぐに出品
-        </h3>
-        <p class='reason-list-description'>
-          スマホで入力するだけで簡単に出品できる！
-        </p>
-      </li>
-      <li class='list'>
-        <%= image_tag "furima-intro02.png", class:"list-pict" %>
-        <span class='reason-list-number'>2</span>
-        <h3 class='reason-list-text'>
-          <span class='reason-list-blue-text'>シンプル</span>
-          で使いやすい
-        </h3>
-        <p class='reason-list-description'>
-          めんどくさい入力は必要なく、検索も購入もスムーズ！
-        </p>
-      </li>
-      <li class='list'>
-        <%= image_tag "furima-intro03.png", class:"list-pict" %>
-        <span class='reason-list-number'>3</span>
-        <h3 class='reason-list-text'>
-          手数料
-          <span class='reason-list-blue-text'>業界最安</span>
-        </h3>
-        <p class='reason-list-description'>
-          最大3%でお得に出品&購入！
-        </p>
-      </li>
-    </ul>
-  </div>
+<ul class="bxslider">
+<li>
 
+<div class="mainVisualText">
+<h1>バッタになりたい魔法使い</h1>
+<p>コモモ・ひろましゃ制作のWeb仕掛け絵本<br>合言葉はバッタになっちゃえ！</p>
+</div>
+<img src="images/mainVisual_img_03.jpg" width="980" height="500" alt="">
+</li>
+<li>
 
+<div class="mainVisualText">
+<h1>WordPress<br>デザインワークブック</h1>
+<p>コモモとひろましゃ2人の共著によるWordPressで本格的なウェブサイトを制作したい方向けの書籍</p>
+</div>
+<img src="images/mainVisual_img_02.jpg" width="980" height="500" alt="">
+</li>
+<li>
+<div class="mainVisualText">
+<h1>Cafe Debut</h1>
+<p>baserCMS、カフェサイト用テーマ<br>
+baserCMS2012　テーマコンテスト　飲食店系テーマ賞受賞</p>
+</div>
+<img src="images/mainVisual_img_01.jpg" width="980" height="500" alt="">
+</li>
+</ul>
+
+</section>
 
 <section class="portfolioIndex">
 <article>
@@ -169,9 +176,9 @@
 <h2><a href="portfolio/01.html">Cafe Debut</a></h2>
 <p>baserCMSのカフェサイト用汎用テーマ<br>テーマコンテスト2012飲食店系テーマ賞受賞</p>
 </article>
-</section>
+</section> %>
 
-<section class="news">
+<%# <section class="news">
 <h1>おしらせ</h1>
 <table>
 <tr>
@@ -186,17 +193,15 @@
 </td>
 </tr>
 </table>
-</section>
+</section> %>
 
 
 </div>
 
 <p class="pagetop"><a href="#page">ページの先頭へ戻る</a></p>
 
-<footer id="pageFoot">
-<p id="copyright"><small>Copyright &copy;2013@komorikomasha All Rights Reserved.</small></p>
-</footer>
-</div> 
+</div>
 
  </body>
+
  </html>
