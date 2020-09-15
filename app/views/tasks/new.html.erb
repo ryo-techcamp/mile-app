@@ -1,0 +1,81 @@
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">案件の情報を入力</h2>
+    <%= form_with model: @task, local: true do |f| %>
+
+    <%# <%= render 'shared/error_messages', model: f.object %> 
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        案件画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        案件名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"案件名" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          商品の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"案件URLや案件の詳細・達成条件等（必須 1,000文字まで）例）URL:http///wwwxxx 詳細：クレジットカード発行案件 条件:クレジットカード発行" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+
+    <div class="sell-price">
+      <div class="weight-bold-text question-text">
+        <span>販売価格<br>(¥300〜9,999,999)</span>
+        <a class="question" href="#">?</a>
+      </div>
+      <div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>価格</span>
+            <span class="indispensable">必須</span>
+          </div>
+          <span class="sell-yen">¥</span>
+          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+          <script type="text/javascript" src="script.js"></script>
+        </div>
+        <div class="price-content">
+          <span>販売手数料 (10%)</span>
+          <span>
+            <span id='add-tax-price'></span>円
+          </span>
+        </div>
+        <div class="price-content">
+          <span>販売利益</span>
+          <span>
+            <span id='profit'></span>円
+        </div>
+        </span>
+      </div>
+    </div>
+
+    <div class="caution">
+      <p class="sentence">
+        <a href="#">他の方が見やす</a>
+        <a href="#">内容</a>
+        での投稿にご協力お願い致します。
+      </p>
+
+
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+</div>
