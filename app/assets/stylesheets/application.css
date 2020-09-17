@@ -52,7 +52,7 @@
   
   #pageHead .globalNavi ul li {
   list-style: none;
-  width: 245px;
+  width: 15%;
   float: left;
   border-left: solid 1px #CCCCCC;
   padding: 0 10px;
@@ -68,13 +68,13 @@
   
   #pageHead .globalNavi ul li a {
   color: inherit;
-  text-deoration: none;
+  text-decoration: none;
   display: block;
   padding: 5px 0;
   }
   
   #pageHead .globalNavi ul li a:hover 
-  #pageHead .globnalNavi ul li.current a {
+   {
   background-color: #F2F2E5;
   }
   
