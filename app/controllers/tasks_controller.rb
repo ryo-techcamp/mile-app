@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
+  before_action :set_task, only: [:show]
   def index
     @tasks = Task.all
   end
@@ -18,7 +19,6 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(params[:id])
   end
 
   private
@@ -31,6 +31,10 @@ class TasksController < ApplicationController
     unless user_signed_in?
       redirect_to action: :index
     end
+  end
+
+  def set_task
+    @task = Task.find(params[:id])
   end
 
 end
