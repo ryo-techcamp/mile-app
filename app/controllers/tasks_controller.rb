@@ -17,10 +17,14 @@ class TasksController < ApplicationController
     end  
   end
 
+  def show
+    @task = Task.find(params[:id])
+  end
+
   private
 
   def task_params
-    params.require(:task).permit(:image, :name, :description, :price)
+    params.require(:task).permit(:image, :name, :description, :price).merge(user_id: current_user.id)
   end
 
   def move_to_index

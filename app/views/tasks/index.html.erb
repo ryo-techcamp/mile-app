@@ -43,7 +43,7 @@
  
       <% @tasks.each do |task|%>
       <li class='list'>
-        <%= link_to "#" do %>
+        <%= link_to task_path(task.id) ,method: :get do %>
         <div class='item-img-content'>
         <%= image_tag task.image,  class: 'item-img'  %>
            <%# <% if item.buyer.present? %>  
