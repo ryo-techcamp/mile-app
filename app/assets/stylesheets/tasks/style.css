@@ -1,3 +1,32 @@
+.top {
+  position: relative;
+}
+.top-image {
+  width: 100%;
+  height: 500px;
+}
+
+.mainVisualText {
+  color: #FFF;
+  background-color: rgba(0,0,0,0.4);
+  width: 50%;
+  height: 15%;
+  padding: 15px 25px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+
+.mainVisualText h1 {
+  font-size: 100%;
+  line-height: 1.231;
+  margin-top: 0;
+}
+
+
+
 /* 商品一覧 */
 
 .item-contents {
