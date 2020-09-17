@@ -13,13 +13,25 @@
    <header id="pageHead">
  <h1 id="siteTitle">マイルで参る</h1>
  <p id="catchcopy">日々の買い物、隙間時間を利用してタダで飛行機に乗って海外旅行をしよう!!</p>
- 
+
  <nav class="globalNavi">
  <ul>
  <li ><a href="/tasks">ホーム</a></li>
  <li><a href="/tasks/new">案件を共有</a></li>
  <li class="current"><a href="#">獲得マイルの確認</a></li>
-  <li><a href="#">ログイン</a></li>
+  <li>
+          <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+           <li><%= link_to  current_user.nick_name, user_session_path, class: "user-nickname"%></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          </div>
+        <% else %>
+          <div class="grid-6"><
+            <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
+            <li><%= link_to "新規登録", new_user_registration_path, class: "post" %></li>
+          </div>
+        <% end %>
+  </li>
  <li><a href="#">お問い合わせ</a></li>
  </ul>
  </nav>
