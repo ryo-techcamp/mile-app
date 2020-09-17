@@ -20,7 +20,7 @@
         <% if user_signed_in? && current_user.id == @task.user_id %>
           <%= link_to '投稿の編集', "#", method: :get, class: "item-red-btn" %>
             <p class='or-text'>or</p>
-          <%= link_to '削除', "#", method: :delete, class:'item-destroy' %>
+          <%= link_to '削除', task_path(@task.id), method: :delete, class:'item-destroy' %>
         <% end %>
         <%# ログインしていないユーザーはログイン画面に遷移させ、ログインしていれば購入ページに移動できる %>
         <% unless user_signed_in? %>
