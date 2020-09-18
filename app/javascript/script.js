@@ -6,7 +6,7 @@ function price(){
         const value = priceInput.value; 
         
       if (value >= 300 && value <= 9999999){
-        let fee = value * 0.1
+        let fee = value * 0.25
         let gains = value - fee
         add_tax.textContent = fee;
         profit.textContent = gains;
