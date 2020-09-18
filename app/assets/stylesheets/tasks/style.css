@@ -30,11 +30,12 @@
 /* 商品一覧 */
 
 .item-contents {
-  background-color: #FFF;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10vh 0;
+  width: 100%;
 }
 
 .item-contents>.title {
@@ -110,3 +111,40 @@
 
 
 /* //商品一覧 */
+
+/*「つくったもの」INDEX*/
+
+.portfolioIndex {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  }
+  
+  .portfolioIndex:after {
+  content: "";
+  clear: both;
+  display: block;
+  }
+  
+  .portfolioIndex article {
+  width: 300px;
+  float:left;
+  margin-left: 40px;
+  }
+  
+  .portfolioIndex article:first-child {
+  margin-left:  0;
+  }
+  
+  .portfolioIndex article h2 {
+  font-size: 18px;
+  margin: 5px 0;
+  }
+  
+  .portfolioIndex article p {
+  margin-top: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  }
+  /* //「つくったもの」INDEX */
