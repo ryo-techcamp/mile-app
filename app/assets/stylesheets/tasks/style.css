@@ -27,12 +27,17 @@ body {background-color: #b5f1df; }
   margin-top: 0;
 }
 
+.pointsite-image {
+width: 300px;
+height: 163px;
+}
+
 
 
 /* 商品一覧 */
 
 .item-contents {
-  background-color: white;
+  background-color:  #b5f1df;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +70,7 @@ body {background-color: #b5f1df; }
   width: 37vh;
   padding: 1vw;
   margin: 0vw 2vw;
-  background-color: #FFF;
+  background-color:  #b5f1df;
 }
 
 
@@ -88,14 +93,14 @@ body {background-color: #b5f1df; }
 }
 
 .sold-out>span {
-  color: #FFF;
+  color:  #b5f1df;
   font-size: 45px;
   font: bold;
 }
 
 
 .item-info {
-  background-color: #FFF;
+  background-color: #b5f1df;
   color: black;
   padding: 1vw;
 }

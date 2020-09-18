@@ -20,14 +20,14 @@
 
 /*ページヘッダー*/
 #pageHead  #siteTitle {
-  font-size:30px;
+  font-size:50px;
   line-height:1.2;
   margin-bottom:0;
   font-family: 'Vollkorn', serif;
   }
   
   #pageHead #catchcopy {
-  font-size:12px;
+  font-size:20px;
   line-height:1.5;
   margin-top:5px;
   }
