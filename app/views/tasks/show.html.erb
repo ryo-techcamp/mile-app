@@ -22,6 +22,9 @@
             <p class='or-text'>or</p>
           <%= link_to '削除', task_path(@task.id), method: :delete, class:'item-destroy' %>
         <% end %>
+        <% if user_signed_in? && current_user.id != @task.user_id %>
+          <%= link_to '案件達成!', task_miles_path(@task.id), class:"item-red-btn", method: :get %>
+        <% end %>
         <%# ログインしていないユーザーはログイン画面に遷移させ、ログインしていれば購入ページに移動できる %>
         <% unless user_signed_in? %>
           <%= link_to '新規登録に進む', new_user_session_path, class:"item-red-btn" %>

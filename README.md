@@ -24,3 +24,19 @@
 
 - belongs_to:
 - has_one:
+
+## miles テーブル 
+
+| Column          | Type       | Options                    |
+| ------          | ---------- | -------------------------- |
+| season          | string     | null: false                |
+| place           | string     | null: false                |
+| city            | string     | null: false                |
+| address         | string     | null: false                |
+| building_name   | string     |                            |
+| phone_number    | string     | null: false                | 
+| buyer_id        | integer    | null: false , foreign_key: true          |
+
+### Association
+
+- belongs_to :buyer
