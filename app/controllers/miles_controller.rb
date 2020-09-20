@@ -7,7 +7,7 @@ class MilesController < ApplicationController
     private
 
  def set_task
-    @task = Task.find(params[:task_id])
+    @task = Task.where(id: params[:task_id])
  end
     
 end

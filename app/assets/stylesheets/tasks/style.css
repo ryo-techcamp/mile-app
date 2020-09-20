@@ -135,14 +135,10 @@ height: 163px;
   }
   
   .portfolioIndex article {
-  width: 300px;
-  float:left;
-  margin-left: 40px;
+  width: 20vw;
+  margin: 0 40px;
   }
   
-  .portfolioIndex article:first-child {
-  margin-left:  0;
-  }
   
   .portfolioIndex article h2 {
   font-size: 18px;

@@ -29,14 +29,11 @@
 
 | Column          | Type       | Options                    |
 | ------          | ---------- | -------------------------- |
-| season          | string     | null: false                |
-| place           | string     | null: false                |
-| city            | string     | null: false                |
-| address         | string     | null: false                |
-| building_name   | string     |                            |
-| phone_number    | string     | null: false                | 
-| buyer_id        | integer    | null: false , foreign_key: true          |
+| price_id        | string     | null: false                |
+| task_id         | string     | null: false                |
+| user_id         | integer    | null: false , foreign_key: true          |
 
 ### Association
 
-- belongs_to :buyer
+- belongs_to :user
+- has_many :tasks

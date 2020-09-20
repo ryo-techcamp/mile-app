@@ -1,6 +1,32 @@
-<div>
-<div>獲得ポイント</div>
-<%= @task.price %>
-<h1>今回の獲得マイルは。。。</h1>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
 
-</div>
+<h1>注文一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>注文ID</th>
+      <th>注文内容</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+
+	<td>
+	<% @task.each do |task| %>
+		[案件ID:<%= task.id %>]
+		[商品名：<%= task.name %>]
+		[金額：<%= task.price %>ポイント]
+	<% end %>
+	</td>
+      </tr>
+
+  </tbody>
+</table>
+
+
+<%= link_to '戻る',{:action=>"index", :controller=>"tasks"}, :class => 'btn' %>
