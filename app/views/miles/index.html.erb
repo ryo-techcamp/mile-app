@@ -14,16 +14,17 @@
   </thead>
 
   <tbody>
-      <tr>
+      <ul>
 
-	<td>
+	<li>
 	<% @task.each do |task| %>
 		[案件ID:<%= task.id %>]
-		[商品名：<%= task.name %>]
-		[金額：<%= task.price %>ポイント]
+		[案件名：<%= task.name %>]
+		[ポイント：<%= task.price %>ポイント]
+    [日付：<%= task.created_at%>]
 	<% end %>
-	</td>
-      </tr>
+	</li>
+      </ul>
 
   </tbody>
 </table>
