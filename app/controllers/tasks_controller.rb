@@ -22,7 +22,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    task.destroy
+    @task.destroy
   end
 
   def edit
