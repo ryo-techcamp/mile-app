@@ -1,33 +1,19 @@
-<% if notice %>
-<p id="notice"><%= notice %></p>
-<% end %>
-
-<h1>注文一覧</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>注文ID</th>
-      <th>注文内容</th>
-      <th colspan="1"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <ul>
+      <%# <ul>
 
 	<li>
 	<% @task.each do |task| %>
-		[案件ID:<%= task.id %>]
-		[案件名：<%= task.name %>]
-		[ポイント：<%= task.price %>ポイント]
-    [日付：<%= task.created_at%>]
-	<% end %>
-	</li>
-      </ul>
-
-  </tbody>
-</table>
+		<%# [案件ID:<%= @task.id %>
 
 
+	<%# <% end %> 
+	<%# </li> %>
+      <%# </ul> %> 
+      
+
+<%= form_with  model:@mile,url:task_miles_path, id: 'charge-form', class: 'card-form',local: true do |f| %>
+  <div>
+  <%= f.text_field :get_mile, class:"#", placeholder:"例)300" %>
+  </div>
+  <%= f.submit "獲得マイルへ追加" ,class:"button" %>
+<% end %>
 <%= link_to '戻る',{:action=>"index", :controller=>"tasks"}, :class => 'btn' %>
