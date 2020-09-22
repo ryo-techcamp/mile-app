@@ -1,13 +1,7 @@
-      <%# <ul>
+	案件ID:<%= @task.id %>
+  案件名:<%= @task.name %>
+	案件ポイント:<%= @task.price %>
 
-	<li>
-	<% @task.each do |task| %>
-		<%# [案件ID:<%= @task.id %>
-
-
-	<%# <% end %> 
-	<%# </li> %>
-      <%# </ul> %> 
       
 
 <%= form_with  model:@mile,url:task_miles_path, id: 'charge-form', class: 'card-form',local: true do |f| %>
