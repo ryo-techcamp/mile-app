@@ -1,6 +1,13 @@
-<div>
-<div>獲得ポイント</div>
-<%= @task.price %>
-<h1>今回の獲得マイルは。。。</h1>
+	案件ID:<%= @task.id %>
+  案件名:<%= @task.name %>
+	案件ポイント:<%= @task.price %>
 
-</div>
+      
+
+<%= form_with  model:@mile,url:task_miles_path, id: 'charge-form', class: 'card-form',local: true do |f| %>
+  <div>
+  <%= f.text_field :get_mile, class:"#", placeholder:"例)300" %>
+  </div>
+  <%= f.submit "獲得マイルへ追加" ,class:"button" %>
+<% end %>
+<%= link_to '戻る',{:action=>"index", :controller=>"tasks"}, :class => 'btn' %>

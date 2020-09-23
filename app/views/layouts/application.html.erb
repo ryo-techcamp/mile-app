@@ -18,7 +18,7 @@
  <ul>
  <li ><a href="/tasks">ホーム</a></li>
  <li><a href="/tasks/new">案件を共有</a></li>
- <li><%= link_to "獲得マイルの確認", "#", class:"post" %></li>
+ <li><a href="/tasks/:task_id/miles/:id(.:format)">獲得マイルの確認</a></li>
   <li>
           <% if user_signed_in? %>
           <div class="user_nav grid-6">
@@ -41,7 +41,7 @@
 </body>
 
 <div class='ad-footer-contents'>
- <%= image_tag "road-2371503_1920.jpg", class: 'top-image'%>
+ <%= image_tag "footer.jpg", class: 'top-image'%>
   <p class='ad-footer-explain'>
     だれでもかんたん、人生を変える陸マイラー生活</p>
 </div>
@@ -74,7 +74,7 @@
     </div>
   </div>
   <%= link_to image_tag("1179.png", class:"logo-white"), "#" %>
-  <p>© MAILE</p>
+  <p>© MILE</p>
 </div>
 
 </html>

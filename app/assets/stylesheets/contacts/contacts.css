@@ -11,10 +11,10 @@ a:hover { color:#7ed0d6;}
 .topicPath {font-size: 12px; }
 
 /*ページの先頭へ戻る*/
-.pagetop　 {
-font-size:12px;
-text-align:right;
-margin-top: 30px;
+.pagetop {
+font-size:20px;
+text-align:left;
+margin-top: 150px;
 }
 
 
