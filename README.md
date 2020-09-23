@@ -76,3 +76,15 @@ Pass  : ryo08014319
 ### Association
 
 - belongs_to:users
+
+## miles テーブル
+
+| Column        | Type    | Options     |
+| --------------| ------  | ----------- |
+| get_mile      | integer | null: false |
+| user_id       | integer  | null: false , foreign_key: true          |
+| task_id       | integer  | null: false , foreign_key: true          |
+### Association
+
+- has_many :users
+
