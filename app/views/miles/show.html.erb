@@ -1,0 +1,50 @@
+      <% @mile.each do |mile|%>
+      <li class='list'>
+        <div class='item-img-content'>
+
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= @task.name %>
+          </h3>
+          <div class='item-price'>
+            <span><%= @task.price %>円<br>(税込み)</span>
+            <span><%= mile.get_mile %>マイル<br></span>
+          </div>
+        </div>
+      <%end%>
+
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<br>
+<h1>Railsはじめてマート</h1>
+<h2> カートに追加された商品</h2>
+<br>
+<br>
+<table>
+	<tr>
+		<th></th>
+		<th>案件名</th>
+		<th>ポイント</th>
+		<th>URL</th>
+		<th>マイル</th>
+
+	</tr>
+		<% @mile.each do |mile| %>
+		<tr>
+			<td text-align:center;><img height="80" src="<%=h @task.image %>"/></td>
+			<td text-align:center;><font size="4"><%= @task.name %></font></td>
+			<td text-align:center;><font size="4"><%= (@task.price).to_i %>マイル</font></td>
+			<td text-align:center;><font size="4"><%= @task.description %></font></td>
+			<td text-align:center;><font size="4"><%= (mile.get_mile).to_i %>マイル</font></td>
+		</tr>
+		<% end %>
+
+		<%# <tr>
+			<td colspan="5"><font size="5">総計：<%= (@cart.total_price).to_i %>円</font></td>
+		<%# </tr> %> 
+
+</table>
+<br>
+<span> </span><%= link_to '買い物を続ける', root_path, :class => 'btn' %><span>
