@@ -1,5 +1,4 @@
  <link rel="stylesheet" href="./miles.scss">
-
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
@@ -9,12 +8,15 @@
 <br>
 <table>
 		<% @mile.each do |mile| %>
+    <% if user_signed_in? && current_user.id == mile.user_id %>
 		<tr>
+			<td text-align:center;><font size="4"><%= mile.user_id %></font></td>
 			<td text-align:center;><font size="4"><%= @task.name %></font></td>
 			<td text-align:center;><font size="4"><%= (@task.price).to_i %>ポイント</font></td>
 			<td text-align:center;><font size="4"><%= @task.description %></font></td>
 			<td text-align:center;><font size="4"><%= (mile.get_mile).to_i %>マイル</font></td>
 		</tr>
+		<% end %>
 		<% end %>
 
 </table>
