@@ -167,7 +167,7 @@ padding-left: 10px;
 /*-----------メインカラム内の装飾---------------*/
 
 #pageBodyMain p { 
-font-size:14px; }
+font-size:14px; 
 line-height:1.429;
 }
 
@@ -203,7 +203,7 @@ text-align:left;
 
 t#pageBodyMain able caption {
 text-align:left;
-font-^weight:bold;
+font-weight:bold;
 }
 
 /*図解*/
@@ -258,7 +258,7 @@ margin-top:30px;
 padding-top:15px;
 }
 
-#pageBodyMain .articleDetaiBody section {
+#pageBodyMain .articleDetailBody section {
 margin:30px 0 ;
 }
 
@@ -333,7 +333,7 @@ line-height:1.5;
  }
  	
  
- }
+ 
 
 /*---「つくったもの」一覧ページ---*/
 #pageBodyMain .articleList {
