@@ -68,7 +68,7 @@ font-size: 14px;
 line-height: 1.429;
 }
 
-#pageHead .globalNavi ul li: first-child {
+#pageHead .globalNavi ul li  {
 border-left: none;
 }
 
