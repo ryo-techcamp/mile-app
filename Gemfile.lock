@@ -238,7 +238,6 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 6.0.0)
   rails_12factor
-  rake (< 11.0)
   sass-rails (~> 5)
   selenium-webdriver
   spring

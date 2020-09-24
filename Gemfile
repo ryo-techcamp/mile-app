@@ -61,5 +61,4 @@ group :production do
   gem 'rails_12factor'
 end
 
-gem 'rake', '< 11.0'
 
