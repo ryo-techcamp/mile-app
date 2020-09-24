@@ -74,7 +74,6 @@ border-left: none;
 
 #pageHead .globalNavi ul li a {
 color: inherit;
-text-deoration: none;
 display: block;
 padding: 5px 0;
 }
@@ -101,8 +100,8 @@ line-height:1.5;
 margin-top:30px;}
 
 #pageBody:after {
-contents:"";
-clean:both;
+/* contents:"";
+clean:both; */
 display:block;}
 
 #pageBodyMain {
@@ -484,7 +483,7 @@ width: 100%;
 font-size: 14px;
 line-height: 1.429;
 border-bottom: 1px dotted #CCCCCC;
-vertial-align: top;
+/* vertial-align: top; */
 }
 
 #pageBody .news table tr th {
