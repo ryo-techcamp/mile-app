@@ -10,7 +10,10 @@
 ・お問い合わせ(お問い合わせ機能)
 
 【URL】
+https://mile-app-29181.herokuapp.com/
 
+ID:mile
+Pass:8119
 
 【テスト用アカウント】
 ・投稿者アカウント
@@ -80,6 +83,7 @@ https://gyazo.com/a23c9f80e922be9995567da280ef684e
 ### Association
 
 - has_many :tasks
+- has_many :miles
 
 ## tasks テーブル
 
@@ -92,6 +96,7 @@ https://gyazo.com/a23c9f80e922be9995567da280ef684e
 ### Association
 
 - belongs_to:users
+- has_many:miles
 
 ## miles テーブル
 
@@ -102,5 +107,6 @@ https://gyazo.com/a23c9f80e922be9995567da280ef684e
 | task_id       | integer  | null: false , foreign_key: true          |
 ### Association
 
-- has_many :users
+- belongs_to:users
+- belongs_to :item
 
