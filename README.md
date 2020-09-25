@@ -89,6 +89,7 @@ https://gyazo.com/a23c9f80e922be9995567da280ef684e
 
 | Column           | Type     |Options           |
 | -----------------| -------- | ------------------|
+| image            | string   | null: false       |
 | name             | string   | null: false       |
 | description      | text     | null: false       |
 | price            | integer  | null: false       |
