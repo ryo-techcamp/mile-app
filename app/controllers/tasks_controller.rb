@@ -29,7 +29,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    task.update(task_params)
+    @task.update(task_params)
   end
 
   private

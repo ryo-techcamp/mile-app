@@ -53,7 +53,7 @@
       <li class='list'>
         <%= link_to task_path(task.id) ,method: :get do %>
         <div class='item-img-content'>
-        <%= image_tag task.image,  class: 'item-img'  %>
+        <%= image_tag task.image , class: "item-img"  %>
            <%# <% if item.buyer.present? %>  
           <%# <div class='sold-out'>
             <span>Sold Out!!</span>
@@ -68,7 +68,7 @@
             <span><%= task.price %>P</span>
           </div>
         </div>
-        <% end %>
+        <%end%>
       <%end%>
     </ul>
   </div>
