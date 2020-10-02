@@ -122,16 +122,17 @@ height: 163px;
 /*「つくったもの」INDEX*/
 
 .portfolioIndex {
-  width: 100%;
-  margin-top: 40px;
+  background-color:  #b5f1df;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 50px;
   }
   
   .portfolioIndex:after {
-  content: "";
-  clear: both;
-  display: block;
+    font-size: 5vh;
+    line-height: 1.4;
+    font-weight: bold;
   }
   
   .portfolioIndex article {
